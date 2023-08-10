@@ -37,6 +37,7 @@
 				
 			</plugin>
 		</plugins>
+		<finalName>spring-boot-demo</finalName>
 	</build>
 
 </project>
