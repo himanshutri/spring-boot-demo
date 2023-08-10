@@ -16,6 +16,16 @@ pipeline
                 bat "mvn clean install "
             }
         }
+        
+        stage('Build docker image'){
+            steps
+            {
+              script{
+                bat 'docker build -t himanshu28138/spring-boot-demo .'
+              }
+            }
+        }
+
 
         stage('Test') 
         {
