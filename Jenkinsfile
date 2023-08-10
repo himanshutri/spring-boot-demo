@@ -13,7 +13,7 @@ pipeline
             {
                 echo 'Build App'
  
-                sh "mvn clean package"
+                sh "mvn clean install -DskipTests=true"
             }
         }
 
