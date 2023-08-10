@@ -25,6 +25,19 @@ pipeline
               }
             }
         }
+        
+      
+ stage('push image to docker'){
+            steps
+            {
+              script{
+                withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
+                bat 'docker login -u himanshu28138 -p ${dockerhubpwd}'
+                }
+                bat 'docker push himanshu28138/spring-boot-demo'
+              }
+            }
+        }
 
 
         stage('Test') 
