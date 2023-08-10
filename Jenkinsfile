@@ -13,7 +13,7 @@ pipeline
             {
                 echo 'Build App'
  
-                sh "mvn clean install "
+                bat "mvn clean install "
             }
         }
 
