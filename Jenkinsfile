@@ -12,7 +12,7 @@ pipeline
             steps 
             {
                 echo 'Build App'
- 
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/himanshutri/spring-boot-demo.git']])
                 bat "mvn clean install "
             }
         }
